@@ -46,10 +46,6 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-export const metadata = {
-  title: "Support — Vinland AI",
-};
-
 export default function SupportPage() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
