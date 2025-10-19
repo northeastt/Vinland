@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000; /* deep black */
+  --foreground: #EAEAEA; /* improved legibility */
+  --accent: #F5D76E; /* golden yellow */
+  --accent-weak: rgba(245, 215, 110, 0.2);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Force dark aesthetic globally */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 1px rgba(245, 215, 110, 0.06) inset, 0 20px 40px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+}
+
+.ring-gold {
+  box-shadow: 0 0 0 1px var(--accent-weak);
+}
+
+.gold-text {
+  color: var(--accent);
+}
+
+.gold-gradient {
+  background: radial-gradient(1200px 600px at 50% -10%, rgba(245, 215, 110, 0.15), transparent 60%),
+              radial-gradient(800px 400px at 100% 10%, rgba(245, 215, 110, 0.08), transparent 50%),
+              linear-gradient(180deg, #0a0a0a, #121212);
+}
+
+.soft-shadow {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
